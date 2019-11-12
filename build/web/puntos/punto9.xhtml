@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Punto 9</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <p:panelGrid style="margin-top:20px" id="containerForm" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="7" >
+                            Agregar producto
+                        </p:column>
+                    </p:row>
+                </f:facet>
+
+                <p:row>
+                    <p:column>Nombre producto</p:column>
+                    <p:column>
+                        <p:inputText id="txtNP" 
+                                     value="#{punto9ManagedBean.nombreProducto}" 
+                                     required="true" >
+                        </p:inputText>
+                    </p:column>
+                    <p:column>Valor</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtV" 
+                                       value="#{punto9ManagedBean.valorProducto}" 
+                                       required="true" 
+                                       decimalPlaces="0" >
+                        </p:inputNumber>
+                    </p:column>
+                    <p:column>Cantidad</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtC" 
+                                       value="#{punto9ManagedBean.cantidadProducto}" 
+                                       required="true" 
+                                       decimalPlaces="0" >
+                        </p:inputNumber>
+                    </p:column>
+                    <p:column>
+                        <p:commandButton icon="ui-icon-circle-plus"  
+                                         validateClient="true" 
+                                         actionListener="#{punto9ManagedBean.agregarProducto()}"
+                                         update="@form,containerForm,dataFactura" ></p:commandButton>
+                    </p:column>
+                </p:row>
+
+            </p:panelGrid>
+
+            <br/>
+
+            <p:dataTable id="dataFactura" 
+                         var="producto" 
+                         value="#{punto9ManagedBean.listProductos}" >
+
+                <p:column headerText="Nombre Producto">
+                    <h:outputText value="#{producto.nombreProducto}" />
+                </p:column>
+
+                <p:column headerText="Valor Unitario">
+                    <h:outputText value="#{producto.valorProducto}" />
+                </p:column>
+
+                <p:column headerText="Cantidad">
+                    <h:outputText value="#{producto.cantidad}" />
+                </p:column>
+
+                <p:column headerText="Total">
+                    <h:outputText value="#{producto.total}" />
+                </p:column>
+
+            </p:dataTable>
+
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Punto 1</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <p:panelGrid id="containerVariables" 
+                         style="text-align: center" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="8">
+                            VARIABLES
+                        </p:column>
+                    </p:row>
+                </f:facet>
+
+                <p:row>
+                    <p:column>M</p:column>
+                    <p:column>N</p:column>
+                    <p:column>P</p:column>
+                    <p:column>Q</p:column>
+                    <p:column>R</p:column>
+                    <p:column>B</p:column>
+                    <p:column>A</p:column>
+                    <p:column>C</p:column>
+                </p:row>
+                <p:row>
+                    <p:column>
+                        <p:inputNumber id="txtM" 
+                                       size="1"
+                                       value="#{punto1ManagedBean.itemM}"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtN" 
+                                       value="#{punto1ManagedBean.itemN}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtP" 
+                                       value="#{punto1ManagedBean.itemP}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtQ" 
+                                       value="#{punto1ManagedBean.itemQ}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtR" 
+                                       value="#{punto1ManagedBean.itemR}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtB" 
+                                       value="#{punto1ManagedBean.itemB}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtA" 
+                                       value="#{punto1ManagedBean.itemA}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtC" 
+                                       value="#{punto1ManagedBean.itemC}"
+                                       size="1"
+                                       maxValue="100"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+
+                </p:row>
+                <p:row>
+                    <p:column colspan="8">
+                        <p:commandButton update="@form" 
+                                         validateClient="true"
+                                         actionListener="#{punto1ManagedBean.calcularFormulas()}"
+                                         value="CALCULAR FORMULAS"></p:commandButton>
+                    </p:column>
+                </p:row>
+
+            </p:panelGrid>
+
+            <p:panelGrid rendered="#{punto1ManagedBean.showResult}" id="containerResultado" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="2">
+                            RESULTADOS
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_a.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado1}
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_b.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado2}
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_c.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado3}
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_d.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado4}
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_e.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado5}
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <img src="../img/1_f.png" ></img>
+                        </p:column>
+                        <p:column>
+                            #{punto1ManagedBean.resultado6}
+                        </p:column>
+                    </p:row>
+
+                </f:facet>
+            </p:panelGrid>
+
+        </h:form>
+
+
+    </h:body>
+</html>
+

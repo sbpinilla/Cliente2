@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Punto 5</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <p:panelGrid id="containerVariables" 
+                         style="text-align: center" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="2">
+                            Valor Precio Billete 
+                        </p:column>
+                    </p:row>
+                </f:facet>
+
+                <p:row>
+                    <p:column>
+                        Numero de kilometros
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txta" 
+                                       value="#{punto5ManagedBean.numKilometros}"
+                                       size="5"
+                                       minValue="0"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber>
+                    </p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column>
+                        Dias de estancia 
+                    </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtC" 
+                                       value="#{punto5ManagedBean.numDias}"
+                                       size="5"
+                                       minValue="0"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber>
+                    </p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column colspan="2">
+                        <p:commandButton actionListener="#{punto5ManagedBean.calcularPrecioBillete()}" 
+                                         value="Calcular"
+                                         ajax="true"
+                                         validateClient="true"
+                                         update="containerVariables" ></p:commandButton>
+                    </p:column>
+
+                </p:row>
+
+                <p:row>
+                    <p:column>
+                        Valor:
+                    </p:column>
+                    <p:column>
+                        #{punto5ManagedBean.resultado}
+                    </p:column>
+                </p:row>
+
+            </p:panelGrid>
+
+        </h:form>
+
+    </h:body>
+</html>
+

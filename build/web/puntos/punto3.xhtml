@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Punto 3</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <p:panelGrid id="containerVariables" 
+                         style="text-align: center" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="3">
+                            Numero de CD´S
+                        </p:column>
+                    </p:row>
+                </f:facet>
+                <p:row>
+                    <p:column>Cantidad: </p:column>
+                    <p:column>
+                        <p:inputNumber id="txtC" 
+                                       value="#{punto3ManagedBean.numGb}"
+                                       size="3"
+                                       required="true"
+                                       decimalPlaces="0"></p:inputNumber> 
+                    </p:column>
+                    <p:column>Gigabyte</p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="3">
+                        <p:commandButton actionListener="#{punto3ManagedBean.calcularCDS()}" 
+                                         value="Calcular"
+                                         validateClient="true"
+                                         update="containerVariables" ></p:commandButton>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="2">
+                        Numero de CDS 
+                        <br/>
+                        para la copia de 
+                        <br/>
+                        seguridad
+                    </p:column>
+                    <p:column>
+                        #{punto3ManagedBean.resultado}
+                    </p:column>
+                </p:row>
+            </p:panelGrid>
+        </h:form>
+
+    </h:body>
+</html>
+

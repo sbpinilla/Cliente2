@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Punto 8</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <p:panelGrid style="margin-top:20px" id="containerForm" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="6" >
+                            NOMINA DE EMPLEADOS
+                        </p:column>
+                    </p:row>
+
+                </f:facet>
+
+                <p:row>
+                    <p:column>Cedula</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtCedula" 
+                                       value="#{punto8ManagedBean.cedula}" 
+                                       required="true" 
+                                       decimalPlaces="0" >
+                        </p:inputNumber>
+
+                    </p:column>
+                    <p:column>Hora Ext. Diurna</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtHoraExtDiurna" 
+                                       value="#{punto8ManagedBean.horaExtDiurna}" 
+                                       decimalPlaces="0" ></p:inputNumber>
+                    </p:column>
+                    <p:column>Recargo</p:column>
+                    <p:column>25%</p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column>Nombre</p:column>
+                    <p:column>
+                        <p:inputText id="txtNombre" 
+                                     required="true" 
+                                     value="#{punto8ManagedBean.nombre}"></p:inputText>
+                    </p:column>
+                    <p:column>Hora Ext. nocturna</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtHoraExtNocturna" 
+                                       value="#{punto8ManagedBean.horaExtNocturna}" 
+                                       decimalPlaces="0" ></p:inputNumber>
+                    </p:column>
+                    <p:column>Recargo</p:column>
+                    <p:column>75%</p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column>Salario</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtSalario" 
+                                       required="true" 
+                                       value="#{punto8ManagedBean.salario}" decimalPlaces="0" ></p:inputNumber>
+                    </p:column>
+                    <p:column>Hora Ext.Festiva</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtHoraExtFestiva" 
+                                       value="#{punto8ManagedBean.horaExtFestivo}" 
+                                       decimalPlaces="0" ></p:inputNumber>
+                    </p:column>
+                    <p:column>Recargo</p:column>
+                    <p:column>100%</p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column>Días</p:column>
+                    <p:column>
+                        <p:inputNumber id="txtDias"
+                                       required="true" 
+                                       value="#{punto8ManagedBean.dias}" decimalPlaces="0" ></p:inputNumber>
+                    </p:column>
+                    <p:column colspan="4">
+                        <p:commandButton validateClient="true" 
+                                         value="Calcular" 
+                                         update="@form"
+                                         actionListener="#{punto8ManagedBean.calcularNomina()}"></p:commandButton>
+                    </p:column>
+
+                </p:row>
+
+            </p:panelGrid>
+
+            <br/>
+
+            <p:panelGrid id="containerResultado" rendered="#{punto8ManagedBean.isResultado}" >
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="2" >
+                            CALCULO DE NOMINA
+                        </p:column>
+                    </p:row>
+
+                </f:facet>
+                <p:row>
+                    <p:column> Salario</p:column>
+                    <p:column>#{punto8ManagedBean.resSalario}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column> Hora Ext Diurno</p:column>
+                    <p:column>#{punto8ManagedBean.resHoraExtDiurna}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column> Hora Ext Nocturna</p:column>
+                    <p:column>#{punto8ManagedBean.resHoraExtNocturna}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column> Hora Ext Festivo</p:column>
+                    <p:column>#{punto8ManagedBean.resHoraExtFestivo}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column> Sub Transporte</p:column>
+                    <p:column>#{punto8ManagedBean.subTransporte}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column>Deducido</p:column>
+                    <p:column style="color: red" >#{punto8ManagedBean.subDeducido}</p:column>
+                </p:row>
+                <p:row>
+                    <p:column> Total</p:column>
+                    <p:column>#{punto8ManagedBean.total}</p:column>
+                </p:row>
+            </p:panelGrid>
+
+        </h:form>
+
+
+    </h:body>
+</html>
+

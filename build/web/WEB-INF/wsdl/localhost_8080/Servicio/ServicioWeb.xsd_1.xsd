@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://paqueteservicio/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://paqueteservicio/">
+
+<xs:element name="Punto1FormulaCinco" type="tns:Punto1FormulaCinco"/>
+
+<xs:element name="Punto1FormulaCincoResponse" type="tns:Punto1FormulaCincoResponse"/>
+
+<xs:element name="Punto1FormulaCuatro" type="tns:Punto1FormulaCuatro"/>
+
+<xs:element name="Punto1FormulaCuatroResponse" type="tns:Punto1FormulaCuatroResponse"/>
+
+<xs:element name="Punto1FormulaDos" type="tns:Punto1FormulaDos"/>
+
+<xs:element name="Punto1FormulaDosResponse" type="tns:Punto1FormulaDosResponse"/>
+
+<xs:element name="Punto1FormulaSeis" type="tns:Punto1FormulaSeis"/>
+
+<xs:element name="Punto1FormulaSeisResponse" type="tns:Punto1FormulaSeisResponse"/>
+
+<xs:element name="Punto1FormulaTres" type="tns:Punto1FormulaTres"/>
+
+<xs:element name="Punto1FormulaTresResponse" type="tns:Punto1FormulaTresResponse"/>
+
+<xs:element name="Punto1FormulaUno" type="tns:Punto1FormulaUno"/>
+
+<xs:element name="Punto1FormulaUnoResponse" type="tns:Punto1FormulaUnoResponse"/>
+
+<xs:element name="Punto2CalcularPuntaje" type="tns:Punto2CalcularPuntaje"/>
+
+<xs:element name="Punto2CalcularPuntajeResponse" type="tns:Punto2CalcularPuntajeResponse"/>
+
+<xs:element name="Punto3CalcularCDS" type="tns:Punto3CalcularCDS"/>
+
+<xs:element name="Punto3CalcularCDSResponse" type="tns:Punto3CalcularCDSResponse"/>
+
+<xs:element name="Punto4CalcularNotas" type="tns:Punto4CalcularNotas"/>
+
+<xs:element name="Punto4CalcularNotasResponse" type="tns:Punto4CalcularNotasResponse"/>
+
+<xs:element name="Punto5CalcularPrecioBillete" type="tns:Punto5CalcularPrecioBillete"/>
+
+<xs:element name="Punto5CalcularPrecioBilleteResponse" type="tns:Punto5CalcularPrecioBilleteResponse"/>
+
+<xs:element name="Punto6CalcularPeso" type="tns:Punto6CalcularPeso"/>
+
+<xs:element name="Punto6CalcularPesoResponse" type="tns:Punto6CalcularPesoResponse"/>
+
+<xs:element name="Punto7CalcularMCD" type="tns:Punto7CalcularMCD"/>
+
+<xs:element name="Punto7CalcularMCDResponse" type="tns:Punto7CalcularMCDResponse"/>
+
+<xs:element name="Punto8CalcularNomina" type="tns:Punto8CalcularNomina"/>
+
+<xs:element name="Punto8CalcularNominaResponse" type="tns:Punto8CalcularNominaResponse"/>
+
+<xs:element name="Punto9CalcularTotalProducto" type="tns:Punto9CalcularTotalProducto"/>
+
+<xs:element name="Punto9CalcularTotalProductoResponse" type="tns:Punto9CalcularTotalProductoResponse"/>
+
+<xs:element name="Suma" type="tns:Suma"/>
+
+<xs:element name="SumaResponse" type="tns:SumaResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:complexType name="Punto1FormulaCinco">
+<xs:sequence>
+<xs:element name="itemM" type="xs:int"/>
+<xs:element name="itemN" type="xs:int"/>
+<xs:element name="itemP" type="xs:int"/>
+<xs:element name="itemQ" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaCincoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto4CalcularNotas">
+<xs:sequence>
+<xs:element name="listEstudiantes" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto4CalcularNotasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:notasDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="notasDTO">
+<xs:sequence>
+<xs:element name="numA" type="xs:int"/>
+<xs:element name="numB" type="xs:int"/>
+<xs:element name="numC" type="xs:int"/>
+<xs:element name="numD" type="xs:int"/>
+<xs:element name="numF" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto5CalcularPrecioBillete">
+<xs:sequence>
+<xs:element name="numKilometros" type="xs:int"/>
+<xs:element name="numDiasF" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto5CalcularPrecioBilleteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaCuatro">
+<xs:sequence>
+<xs:element name="itemM" type="xs:int"/>
+<xs:element name="itemN" type="xs:int"/>
+<xs:element name="itemP" type="xs:int"/>
+<xs:element name="itemQ" type="xs:int"/>
+<xs:element name="itemR" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaCuatroResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaDos">
+<xs:sequence>
+<xs:element name="itemM" type="xs:int"/>
+<xs:element name="itemN" type="xs:int"/>
+<xs:element name="itemP" type="xs:int"/>
+<xs:element name="itemQ" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaDosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaSeis">
+<xs:sequence>
+<xs:element name="itemB" type="xs:int"/>
+<xs:element name="itemA" type="xs:int"/>
+<xs:element name="itemC" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaSeisResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto6CalcularPeso">
+<xs:sequence>
+<xs:element name="listEstudiantes" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto6CalcularPesoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pesoDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pesoDTO">
+<xs:sequence>
+<xs:element name="numA" type="xs:int"/>
+<xs:element name="numB" type="xs:int"/>
+<xs:element name="numC" type="xs:int"/>
+<xs:element name="numD" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto2CalcularPuntaje">
+<xs:sequence>
+<xs:element name="numPreguntasB" type="xs:int"/>
+<xs:element name="numPreguntasC" type="xs:int"/>
+<xs:element name="numPreguntasI" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto2CalcularPuntajeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto3CalcularCDS">
+<xs:sequence>
+<xs:element name="numGb" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto3CalcularCDSResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto7CalcularMCD">
+<xs:sequence>
+<xs:element name="numUno" type="xs:int"/>
+<xs:element name="numDos" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto7CalcularMCDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaUno">
+<xs:sequence>
+<xs:element name="itemM" type="xs:int"/>
+<xs:element name="itemN" type="xs:int"/>
+<xs:element name="itemP" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaUnoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaTres">
+<xs:sequence>
+<xs:element name="itemM" type="xs:int"/>
+<xs:element name="itemN" type="xs:int"/>
+<xs:element name="itemP" type="xs:int"/>
+<xs:element name="itemQ" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto1FormulaTresResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto8CalcularNomina">
+<xs:sequence>
+<xs:element name="nominaInDTO" type="tns:nominaInDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nominaInDTO">
+<xs:sequence>
+<xs:element name="cedula" type="xs:string" minOccurs="0"/>
+<xs:element name="dias" type="xs:string" minOccurs="0"/>
+<xs:element name="horaExtDiurna" type="xs:string" minOccurs="0"/>
+<xs:element name="horaExtFestivo" type="xs:string" minOccurs="0"/>
+<xs:element name="horaExtNocturna" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="salario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto8CalcularNominaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nominaOutDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nominaOutDTO">
+<xs:sequence>
+<xs:element name="resHoraExtDiurna" type="xs:int"/>
+<xs:element name="resHoraExtFestivo" type="xs:int"/>
+<xs:element name="resHoraExtNocturna" type="xs:int"/>
+<xs:element name="resSalario" type="xs:int"/>
+<xs:element name="subDeducido" type="xs:int"/>
+<xs:element name="subTransporte" type="xs:int"/>
+<xs:element name="total" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Suma">
+<xs:sequence>
+<xs:element name="numero1" type="xs:int"/>
+<xs:element name="numero2" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SumaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto9CalcularTotalProducto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:productoDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productoDTO">
+<xs:sequence>
+<xs:element name="cantidad" type="xs:int"/>
+<xs:element name="nombreProducto" type="xs:string" minOccurs="0"/>
+<xs:element name="total" type="xs:int"/>
+<xs:element name="valorProducto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Punto9CalcularTotalProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productoDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
